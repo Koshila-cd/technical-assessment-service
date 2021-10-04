@@ -1,6 +1,7 @@
 package com.company.technicalassessment.domain;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,8 @@ import java.math.BigDecimal;
 @Table(name = "products")
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product {
 
     @Id
@@ -22,11 +25,9 @@ public class Product {
     private String productName;
 
     @Column(name = "carton_units")
-    private int cartonUnits;
+    private int unitsPerCarton;
 
     @Column(name = "carton_price")
     private BigDecimal cartonPrice;
 
-    @Column(name = "unit_price")
-    private BigDecimal unitPrice;
 }

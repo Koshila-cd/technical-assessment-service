@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 @Slf4j
@@ -28,8 +27,8 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.save(Product.builder()
                 .productName(productDto.getProductName())
                 .cartonPrice(productDto.getCartonPrice())
-                .cartonUnits(productDto.getCartonUnits())
-                .unitPrice(productDto.getCartonPrice().divide(BigDecimal.valueOf(productDto.getCartonUnits())))
+                .unitsPerCarton(productDto.getUnitsPerCarton())
+//                .unitPrice(productDto.getCartonPrice().divide(BigDecimal.valueOf(productDto.getUnitsPerCarton())))
                 .build());
     }
 

@@ -9,7 +9,7 @@ public class ProductDto {
 
     private Long id;
     private String productName;
-    private int cartonUnits;
+    private int unitsPerCarton;
     private BigDecimal cartonPrice;
     private BigDecimal unitPrice;
 }

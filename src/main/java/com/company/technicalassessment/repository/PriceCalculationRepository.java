@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PriceCalculationRepository extends JpaRepository<Product, Integer> {
+public interface PriceCalculationRepository extends JpaRepository<Product, Long> {
 }
